@@ -1,0 +1,16 @@
+{
+    "name": "elct9620/phpconf2014-sample",
+    "description": "PHPConf 2014 sample code.",
+    "require": {
+        "corneltek/pux": "*",
+        "twig/twig": "*",
+        "j4mie/idiorm": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "蒼時弦也",
+            "email": "elct9620@frost.tw"
+        }
+    ]
+}
