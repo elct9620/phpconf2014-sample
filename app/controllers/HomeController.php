@@ -10,7 +10,7 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        return "Hello, My Framework!";
+        return $this->view->render('home/index.html.twig');
     }
 }
 

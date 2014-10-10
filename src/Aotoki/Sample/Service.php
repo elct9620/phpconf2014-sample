@@ -37,7 +37,7 @@ class Service
     public static function get($name, $default = null)
     {
        $service = self::getService();
-       if($serivce->hasService($name)) { return $service->_services[$name]; }
+       if($service->hasService($name)) { return $service->_services[$name]; }
        return $default;
     }
 
