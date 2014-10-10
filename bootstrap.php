@@ -13,7 +13,12 @@ require 'vendor/autoload.php';
 // TODO: Add idiorm configure
 
 # Setup View
-// TODO: Add Twig configure
+$twigLoader = new Twig_Loader_Filesystem(ABSPATH . "/app/views");
+$twig = new Twig_Environment($twigLoader, [
+    "cache" => ABSPATH . "/app/cache",
+    "auto_reload" => true
+]);
+
 
 # Setup Router
 require ABSPATH . '/app/config/router.php';
