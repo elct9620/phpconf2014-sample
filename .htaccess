@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Redirect to assets
+RewriteRule ^assets/vendor/(.*)$ public/vendor/$1 [L]
+RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+
+# Protected important file
+RewriteRule ^(app|src|vendor)(.*) public/index.php/$1 [L]
+
+# Redirect index.php to public/index.php
+RewriteRule ^index.php$ public/index.php/?%{QUERY_STRING} [L]
+
+# Normal Rewrite rules
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $1 !(.css|.js|.pdf|.png|.gif|.jpg)$
+RewriteRule ^(.*)$ public/index.php/$1?%{QUERY_STRING} [L]
+
