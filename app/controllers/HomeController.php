@@ -3,7 +3,10 @@
  * Class HomeController
  * @author Aotoki
  */
-class HomeController
+
+use Aotoki\Sample\BaseController;
+
+class HomeController extends BaseController
 {
     public function index()
     {

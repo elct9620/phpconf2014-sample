@@ -9,6 +9,8 @@ define('ABSPATH', dirname(__FILE__));
 
 require 'vendor/autoload.php';
 
+use Aotoki\Sample\Service;
+
 # Setup Database
 // TODO: Add idiorm configure
 
@@ -18,6 +20,8 @@ $twig = new Twig_Environment($twigLoader, [
     "cache" => ABSPATH . "/app/cache",
     "auto_reload" => true
 ]);
+
+Service::register('view', $twig);
 
 
 # Setup Router
