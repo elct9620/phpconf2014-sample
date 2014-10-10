@@ -12,7 +12,12 @@ require 'vendor/autoload.php';
 use Aotoki\Sample\Service;
 
 # Setup Database
-// TODO: Add idiorm configure
+$databaseConfig = include ABSPATH . "/app/config/database.php";
+ORM::configure('mysql:host=' . $databaseConfig["hostname"] . ';dbname=' . $databaseConfig["database"]);
+ORM::configure('username', $databaseConfig["username"]);
+ORM::configure('password', $databaseConfig["password"]);
+ORM::configure('caching', true);
+ORM::configure('caching_auto_clear', true);
 
 # Setup View
 $twigLoader = new Twig_Loader_Filesystem(ABSPATH . "/app/views");
