@@ -12,5 +12,10 @@
             "name": "蒼時弦也",
             "email": "elct9620@frost.tw"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "Aotoki\\": "src/"
+        }
+    }
 }
