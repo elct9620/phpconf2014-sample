@@ -4,7 +4,7 @@
     "require": {
         "corneltek/pux": "*",
         "twig/twig": "*",
-        "j4mie/idiorm": "*"
+        "j4mie/paris": "*"
     },
     "license": "MIT",
     "authors": [

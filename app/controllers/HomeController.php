@@ -10,7 +10,10 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        return $this->view->render('home/index.html.twig');
+        $comments = Comments::order_by_desc('created_at')->find_many();
+        return $this->view->render('home/index.html.twig', array(
+            'comments' => $comments
+        ));
     }
 }
 

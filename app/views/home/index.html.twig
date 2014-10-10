@@ -5,6 +5,11 @@
     <title>My Framework</title>
   </head>
   <body>
-    Hello, My Framework from View!
+    {% for comment in comments %}
+      <div class="comment">
+        <h4>{{ comment.nickname ? comment.nickname : "Anonymous"}} @ {{ comment.created_at }}</h4>
+        <p>{{ comment.comment }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
