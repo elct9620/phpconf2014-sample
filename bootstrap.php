@@ -5,6 +5,8 @@
  * Load project and initialize
  */
 
+define('ABSPATH', dirname(__FILE__));
+
 require 'vendor/autoload.php';
 
 # Setup Database
@@ -14,7 +16,8 @@ require 'vendor/autoload.php';
 // TODO: Add Twig configure
 
 # Setup Router
-// TODO: Add Pux configure
+require ABSPATH . '/app/config/router.php';
 
 # Boot Application
-// TODO: Let application work
+use Aotoki\Sample\Router;
+Router::dispatch();

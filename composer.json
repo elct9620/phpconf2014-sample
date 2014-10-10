@@ -16,6 +16,12 @@
     "autoload": {
         "psr-0": {
             "Aotoki\\": "src/"
-        }
+        },
+        "classmap": [
+            "app/controllers",
+            "app/models",
+            "app/services",
+            "app/helpers"
+        ]
     }
 }
