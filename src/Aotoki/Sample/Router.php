@@ -26,7 +26,7 @@ class Router
 
     private static function getMux()
     {
-        if(is_null(self::$_instance) or !self::$_instance instanceof Router) {
+        if(is_null(self::$_instance) || !self::$_instance instanceof Router) {
             self::$_instance = new Router;
         }
         return self::$_instance->_mux;
